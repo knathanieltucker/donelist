@@ -48,4 +48,4 @@ let DeedsSchema = new SimpleSchema({
   }
 });
 
-Comments.attachSchema( CommentsSchema );
+Deeds.attachSchema( DeedsSchema );
