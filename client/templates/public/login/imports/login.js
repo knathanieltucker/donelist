@@ -1,4 +1,4 @@
-let login = ( options ) => {
+export let login = ( options ) => {
   _validate( options.form, options.template );
 };
 
@@ -43,4 +43,3 @@ let _handleLogin = ( template ) => {
   });
 };
 
-Modules.client.login = login;

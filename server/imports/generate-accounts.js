@@ -6,7 +6,7 @@ let administrators = [
   }
 ];
 
-let generateAccounts = () => {
+export let generateAccounts = () => {
   let fakeUserCount = 5,
       usersExist    = _checkIfAccountsExist( administrators.length + fakeUserCount );
 
@@ -60,4 +60,3 @@ let _generateFakeUsers = ( count ) => {
   return users;
 };
 
-Modules.server.generateAccounts = generateAccounts;

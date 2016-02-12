@@ -1,4 +1,4 @@
-let recoverPassword = ( options ) => {
+export let recoverPassword = ( options ) => {
   _validate( options.form, options.template );
 };
 
@@ -35,5 +35,3 @@ let _handleRecovery = ( template ) => {
     }
   });
 };
-
-Modules.client.recoverPassword = recoverPassword;

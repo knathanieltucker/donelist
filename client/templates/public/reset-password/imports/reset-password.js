@@ -1,4 +1,4 @@
-let resetPassword = ( options ) => {
+export let resetPassword = ( options ) => {
   _validate( options.form, options.template );
 };
 

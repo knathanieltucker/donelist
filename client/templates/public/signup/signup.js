@@ -1,5 +1,7 @@
+import {signup} from "./imports/signup";
+
 Template.signup.onRendered( () => {
-  Modules.client.signup({
+  signup({
     form: "#signup",
     template: Template.instance()
   });

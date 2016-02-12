@@ -1,8 +1,11 @@
+import {setEnvironmentVariables} from "./imports/set-environment-variables";
+import {generateAccounts} from "./imports/generate-accounts";
+
 Meteor.startup( () => {
-  Modules.server.setEnvironmentVariables();
+  setEnvironmentVariables();
 
-  //Modules.server.setBrowserPolicies();
+  //setBrowserPolicies();
 
-  Modules.server.generateAccounts();
+  generateAccounts();
 
 });
