@@ -26,7 +26,8 @@ let DeedsSchema = new SimpleSchema({
   "deed": {
     type: String,
     optional: false,
-    label: "What you have done"
+    label: "What you have done",
+    max: 200
   },
   "shared.users": {
     type: [String],
@@ -45,7 +46,17 @@ let DeedsSchema = new SimpleSchema({
       if (this.isInsert)
         return [];
     }
+  },
+  "shared.tags": {
+    type: [String],
+    label: "The list of tag ids associated with the deed",
+    optional: true,
+    autoValue: function () {
+      if (this.isInsert)
+        return [];
+    }
   }
+
 });
 
 Deeds.attachSchema( DeedsSchema );
