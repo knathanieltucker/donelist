@@ -15,3 +15,10 @@ authenticatedRoutes.route( '/dashboard', {
     BlazeLayout.render( 'default', { yield: 'dashboard' } );
   }
 });
+
+authenticatedRoutes.route( '/insertDeed', {
+  name: 'insertDeed',
+  action() {
+    BlazeLayout.render( 'default', { yield: 'insertDeed' } );
+  }
+});

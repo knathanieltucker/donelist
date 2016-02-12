@@ -1,13 +1,14 @@
 Meteor.methods({
-  insertMethod( argument ) {
-    check( argument, Object );
+  insertDeed( deed ) {
+    check( deed, Object );
 
-    try {
-      var documentId = Deeds.insert( argument );
-      return documentId;
-    } catch( exception ) {
-      return exception;
-    }
+    if (!this.userId)
+      throw new Meteor.Error("insertDeedFormValidation", "You must be logged in to create a deed");
+
+    if (!Match.test(deed.deed, String) || !deed.deed || deed.deed.length > 200)
+      throw new Meteor.Error("insertDeedFormValidation", "You must provide a valid deed");
+
+    return Deeds.insert( {deed: deed.deed} );
   },
   readMethod( argument ) {
     check( argument, String );
