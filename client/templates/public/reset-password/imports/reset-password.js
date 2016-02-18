@@ -45,5 +45,3 @@ let _handleReset = ( template ) => {
     }
   });
 };
-
-Modules.client.resetPassword = resetPassword;
