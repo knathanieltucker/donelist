@@ -1,5 +1,10 @@
 const publicRoutes = FlowRouter.group({
-  name: 'public'
+  name: 'public',
+  triggersEnter: [ () => {
+    if (Meteor.loggingIn() || Meteor.userId()) {
+      FlowRouter.go('index');
+    }
+  }]
 });
 
 publicRoutes.route( '/signup', {
