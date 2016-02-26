@@ -12,19 +12,5 @@ Template.default.helpers({
 	},
 	authenticated() {
 		return !Meteor.loggingIn() && Meteor.user();
-	},
-	redirectAuthenticated() {
-	 	return handleRedirect([
-			'login',
-			'signup',
-			'recover-password',
-			'reset-password'
-		], '/' );
-	},
-	redirectPublic() {
-		return handleRedirect([
-			'index',
-			'dashboard'
-		], '/login' );
 	}
 });

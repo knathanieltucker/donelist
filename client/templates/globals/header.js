@@ -16,5 +16,11 @@ Template.header.events({
         Session.set('loggedIn', false);
       }
     });
+  },
+  'click #menu-toggle': (e) => {
+    e.preventDefault();
+    let degrees = 180;
+    $('#logo').toggleClass('down');
+    $('#wrapper').toggleClass('toggled');
   }
 });

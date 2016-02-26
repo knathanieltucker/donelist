@@ -34,3 +34,10 @@ publicRoutes.route( '/reset-password/:token', {
     BlazeLayout.render( 'default', { yield: 'resetPassword' } );
   }
 });
+
+publicRoutes.route( '/sidebar', {
+  name: 'sidebar',
+  action() {
+    BlazeLayout.render( 'sidebar' );
+  }
+});
