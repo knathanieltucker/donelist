@@ -50,6 +50,7 @@ kadira:flow-router@2.10.0
 livedata@1.0.15
 localstorage@1.0.6-modules.8
 logging@1.0.9-modules.8
+markdown@1.0.6-modules.8
 meteor@1.1.11-modules.8
 meteor-base@1.0.1
 meteor-env-dev@0.0.1-modules.8
@@ -73,6 +74,8 @@ npm-container@1.2.0
 npm-mongo@1.4.40-modules.8
 observe-sequence@1.0.8-modules.8
 ordered-dict@1.0.4
+perak:codemirror@1.2.9
+pntbr:js-yaml-client@0.0.1
 promise@0.5.2-modules.8
 random@1.0.6-modules.8
 rate-limit@1.0.1-modules.8

@@ -18,6 +18,13 @@ authenticatedRoutes.route( '/', {
   }
 });
 
+authenticatedRoutes.route( '/deed/editor/:deedId', {
+  name: 'deedEditor',
+  action() {
+    BlazeLayout.render( 'default', { yield: 'deedEditor' } );
+  }
+});
+
 authenticatedRoutes.route( '/dashboard', {
   name: 'dashboard',
   action() {

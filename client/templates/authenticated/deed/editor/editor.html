@@ -1,0 +1,15 @@
+<template name="deedEditor">
+  <div class="row">
+    <div class="col-md-6">
+      <input type="text" class="form-control" placeholder="Title">
+      <textarea id="deedEditor" class="form-control boxsizingBorder" rows="10"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      {{#markdown}}
+        {{deedMarkdown}}
+      {{/markdown}}
+    </div>
+  </div>
+</template>
